@@ -1,0 +1,105 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                        CUSTOM GLOSSARY CONFIG
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newglossarystyle{mysymbolstyle}{
+  \setglossarystyle{tree}
+  \renewcommand{\glossentry}[2]{
+    \hangindent0pt\relax
+    \parindent0pt\relax
+    \textit{\glossentrydesc{##1}}
+    \glstarget{##1}: {\glossentryname{##1}}
+    \space##2\par
+  }
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                               COMMANDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\timeT}[0]{t}
+\newcommand{\mass}[0]{m}
+\newcommand{\position}[0]{\bm{r}}
+\newcommand{\velocity}[0]{\bm{\dot{r}}}
+\newcommand{\acceleration}[0]{\bm{\ddot{r}}}
+\newcommand{\force}[0]{\bm{F}}
+\newcommand{\momentum}[0]{\bm{p}}
+\newcommand{\angularmomentum}[0]{\mathbf{L}}
+\newcommand{\torque}[0]{\bm{\tau}}
+\newcommand{\potentialEnergy}[0]{U(\bm{r})}
+\newcommand{\kineticEnergy}[0]{T}
+\newcommand{\totalEnergy}[0]{E}
+\newcommand{\angularvelocity}[0]{\bm{\omega}}
+\newcommand{\momentofinertia}[0]{\mathbf{I}}
+\newcommand{\eulerangles}[0]{\theta, \phi, \psi}
+\newcommand{\generalizedcoordinate}[0]{q_i}
+\newcommand{\generalizedvelocity}[0]{\dot{q}_i}
+\newcommand{\arclength}[0]{\ell}
+\newcommand{\lagrangian}[0]{L}
+\newcommand{\hamiltonian}[0]{\mathcal{H}}
+\newcommand{\action}[0]{S}
+\newcommand{\poissonbracket}[2]{\left\{#1, #2\right\}}
+\newcommand{\phaseSpacePoint}[0]{\bm{z}}
+\newcommand{\canonicalTransformation}[0]{T}
+\newcommand{\constraint}[0]{f}
+\newcommand{\dissipation}[0]{\mathcal{D}}
+\newcommand{\virtualDisplacement}[0]{\delta q_{i}}
+\newcommand{\generalizedforce}[0]{Q_i}
+\newcommand{\liederivative}[0]{\mathcal{L}}
+\newcommand{\noethercharge}[0]{J}
+\newcommand{\timetranslation}[0]{T}
+\newcommand{\rotationoperator}[0]{R}
+\newcommand{\lagrangemultiplier}[0]{\lambda}
+\newcommand{\massmatrix}[0]{\mathbf{M}_{ij}}
+\newcommand{\indexi}[0]{i}
+\newcommand{\indexj}[0]{j}
+\newcommand{\indexk}[0]{k}
+\newcommand{\volumeelement}[0]{d\mathcal{V}}
+\newcommand{\areaelement}[0]{d\mathcal{A}}
+\newcommand{\lengthelement}[0]{d\ell}
+\newcommand{\lagrangiandensity}[0]{\mathscr{L}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                            MAKE GLOSSERIES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeglossaries
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                           GLOSSARY ELEMENTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newglossaryentry{timeT}{name={\ensuremath{\timeT}}, description=Time}
+\newglossaryentry{mass}{name={\ensuremath{\mass}}, description=Mass}
+\newglossaryentry{position}{name={\ensuremath{\position}}, description=Position vector}
+\newglossaryentry{velocity}{name={\ensuremath{\velocity}}, description=Velocity vector}
+\newglossaryentry{acceleration}{name={\ensuremath{\acceleration}}, description=Acceleration vector}
+\newglossaryentry{force}{name={\ensuremath{\force}}, description=Force vector}
+\newglossaryentry{momentum}{name={\ensuremath{\momentum}}, description=Linear momentum}
+\newglossaryentry{angularmomentum}{name={\ensuremath{\angularmomentum}}, description=Angular momentum}
+\newglossaryentry{torque}{name={\ensuremath{\torque}}, description=Torque}
+\newglossaryentry{potentialenergy}{name={\ensuremath{\potentialEnergy}}, description=Potential energy}
+\newglossaryentry{kineticenergy}{name={\ensuremath{\kineticEnergy}}, description=Kinetic energy}
+\newglossaryentry{totalenergy}{name={\ensuremath{\totalEnergy}}, description=Total energy}
+\newglossaryentry{angularvelocity}{name={\ensuremath{\angularvelocity}}, description=Angular velocity}
+\newglossaryentry{momentofinertia}{name={\ensuremath{\momentofinertia}}, description=Moment of inertia (scalar or tensor)}
+\newglossaryentry{eulerangles}{name={\ensuremath{\eulerangles}}, description=Euler angles}
+\newglossaryentry{generalizedcoordinate}{name={\ensuremath{\generalizedcoordinate}}, description=Generalized coordinates}
+\newglossaryentry{generalizedvelocity}{name={\ensuremath{\generalizedvelocity}}, description=Generalized velocities}
+\newglossaryentry{arclength}{name={\ensuremath{\arclength}}, description=Arc length}
+\newglossaryentry{lagrangian}{name={\ensuremath{\lagrangian}}, description=Lagrangian}
+\newglossaryentry{hamiltonian}{name={\ensuremath{\hamiltonian}}, description=Hamiltonian}
+\newglossaryentry{action}{name={\ensuremath{\action}}, description=Action}
+\newglossaryentry{poissonbracket}{name={\ensuremath{\poissonbracket{f}{g}}}, description={Poisson bracket of f and g}}
+\newglossaryentry{phasespacepoint}{name={\ensuremath{\phaseSpacePoint}}, description={Phase space point \texorpdfstring{$(q,p)$}{(q,p)}}}
+\newglossaryentry{canonicaltransformation}{name={\ensuremath{\canonicalTransformation}}, description=Canonical transformation}
+\newglossaryentry{constraint}{name={\ensuremath{\constraint}}, description=Constraint function}
+\newglossaryentry{dissipation}{name={\ensuremath{\dissipation}}, description=Dissipation function}
+\newglossaryentry{virtualdisplacement}{name={\ensuremath{\virtualDisplacement}}, description=Virtual displacement}
+\newglossaryentry{generalizedforce}{name={\ensuremath{\generalizedforce}},description=Generalized force}
+\newglossaryentry{liederivative}{name={\ensuremath{\liederivative}},description={Lie derivative (indicates symmetry when vanishing)}}
+\newglossaryentry{noethercharge}{name={\ensuremath{\noethercharge}},description=Conserved Noether charge}
+\newglossaryentry{timetranslation}{name={\ensuremath{\timetranslation}},description=Time translation operator}
+\newglossaryentry{rotationoperator}{name={\ensuremath{\rotationoperator}},description=Rotation operator}
+\newglossaryentry{lagrangemultiplier}{name={\ensuremath{\lagrangemultiplier}},description=Lagrange multiplier}
+\newglossaryentry{massmatrix}{name={\ensuremath{\massmatrix}},description=Mass matrix (symmetric positive definite)}
+\newglossaryentry{summationindices}{name={\ensuremath{\indexi,\indexj,\indexk}},description={Indices for 3D spatial components (summation convention)}}
+\newglossaryentry{diffelements}{name={\ensuremath{\volumeelement, \areaelement, \lengthelement}},description={Volume, area, and length elements respectively}}
+\newglossaryentry{lagrangiandensity}{name={\ensuremath{\lagrangiandensity}},description={Lagrangian density (spacetime dependent Lagrangian)}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                           ADD ELEMENTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\glsaddall

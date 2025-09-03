@@ -1,0 +1,59 @@
+\ifLuaTeX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This whole page is an if-statement as a workaround to get Xenops to play
+% nice with the main editor. By default it wants to compile all the images
+% but it makes them too big and I can't figure out how to change the sizes,
+% or disable them. So what I've done is placed all images in here and use a
+% different compiler than Xenops for them. Ultimately what this means is that
+% Images won't generate in the editor, only equations - as desired in my case.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                        BACKGROUND WALLPAPER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\BackgroundPic{
+    \AddToShipoutPictureBG{%
+        \AtPageLowerLeft{%
+            \ifodd\value{page}%
+                \includegraphics[width=\pagewidth,height=\pageheight]{./media/odd_page.jpg}%
+            \else%
+                \includegraphics[width=\pagewidth,height=\pageheight]{./media/even_page.jpg}%
+            \fi%
+        }%
+    }%
+}
+\BackgroundPic
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                         CORNER ORNAMENTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\AddToShipoutPicture{%
+\begingroup
+
+\ifnum\c@page > 0
+\put(2mm,\dimexpr\paperheight-2mm){%
+\pgfornament[anchor=north west,width=2cm]{63}}
+\put(2mm,2mm){%
+\pgfornament[anchor=south west,width=2cm,symmetry=h]{63}}
+\put(\dimexpr\paperwidth-2mm-2cm,\dimexpr\paperheight-2mm){%
+\pgfornament[anchor=north east,width=2cm,symmetry=v]{63}}
+\put(\dimexpr\paperwidth-2mm-2cm,2mm){%
+\pgfornament[anchor=south east,width=2cm,symmetry=c]{63}}
+\fi
+\endgroup
+}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                         CORNER ORNAMENTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\OverlayTitlePage{
+  \AddToShipoutPictureBG*{%
+    \ifnum\value{page}=0
+      \AtPageLowerLeft{%
+        \includegraphics[width=\paperwidth,height=\paperheight]{./media/cover.png}%
+      }%
+    \fi
+  }
+}
+\OverlayTitlePage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\fi

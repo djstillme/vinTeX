@@ -1,0 +1,147 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                             TITLE PAGE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+    \setcounter{page}{0}
+    \centering
+    \vspace*{\baselineskip}
+    \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+    \rule{\textwidth}{0.4pt}\\[\baselineskip]
+    \decoratedtitle
+    \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+    \rule{\textwidth}{1.6pt}\\[\baselineskip]
+    \scshape
+    \mediumtitle
+    \par
+    \vspace*{2\baselineskip}
+    \vfill
+    \authorname
+    \par
+\end{titlepage}
+\pagenumbering{roman}
+\setcounter{page}{1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                           HEADERS & FOOTERS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE]{\leftmark}
+\fancyhead[LO]{\rightmark}
+\fancyhead[LE]{\thepage}
+\fancyhead[RO]{\thepage}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                             PREFACE PAGE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\thispagestyle{empty}
+\hypertarget{preface}{}
+\bookmark[level=0,dest=preface]{Preface}
+\vspace*{\fill}
+\begin{center}
+{\LARGE\bfseries \titlestraight}\\[1.5em]
+{\Large\itshape \authorname}\\[1em]
+\end{center}
+\vspace*{\fill}
+\vfill
+\begin{center}
+\textit{\publisher}\\
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                       THEOREM CUSTOMIZATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheorem{theoreminner}{Theorem}[chapter]
+\NewDocumentEnvironment{theo}{o}
+  {%
+    \vspace{1.25em}%
+    \par\noindent
+    \begin{minipage}{\linewidth}
+      \raisebox{0.6em}{\pgfornament[symmetry=v,scale=0.5]{94}}%
+      \hspace{0.6em}%
+      \begin{minipage}[t]{\dimexpr\linewidth-3.5em}
+        \begin{theoreminner}%
+          \IfValueT{#1}{\textit{\textbf{(#1)}}\ }%
+  }
+  {%
+        \end{theoreminner}%
+      \end{minipage}%
+    \end{minipage}%
+    \vspace{1.25em}%
+  }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                       SECTION CUSTOMIZATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\thesection}{\S\thechapter.\arabic{section}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                        TABLE OF CONTENTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\begingroup
+\makeatletter
+\renewcommand\tableofcontents{%
+  \chapter*{\vspace*{-3em}\LARGE\bfseries\centering\contentsname \\[0.5em]
+    \small \pgfornament[scale=0.40]{84}
+        \@mkboth{%
+          \MakeUppercase\contentsname}{\contentsname}}%
+      \thispagestyle{empty}
+    \@starttoc{toc}%
+}
+\makeatother
+\addtocontents{toc}{\protect\vspace*{-2.5em}}
+\tableofcontents
+\endgroup
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                            EPIGRAPH SETTINGS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand\epigraphflush{flushright}
+\renewcommand\epigraphsize{\normalsize\itshape}
+\setlength\epigraphwidth{0.7\textwidth}
+\makeatletter
+\renewcommand{\@epitext}[1]{\textit{``#1''}\\\@epirule}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                           CHAPTER CUSTOM
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{titlepagecolor}{cmyk}{1,.60,0,.40}
+\DeclareFixedFont{\titlefont}{T1}{ppl}{b}{it}{0.5in}
+\newcommand{\customchapter}[3]{
+    \clearpage
+    \refstepcounter{chapter}
+    \hypertarget{chapter:\thechapter}{}
+    \bookmark[level=0,dest=chapter:\thechapter]{Chapter \thechapter: #1}
+    \addtocontents{toc}{\protect\contentsline{chapter}{Chapter \thechapter: #1}{}{}}
+    \markboth{#1}{#1}
+    \thispagestyle{empty}
+    \vspace*{0pt}
+    \noindent{\titlefont Chapter \thechapter}\par \pgfornament[width=2cm]{77}
+    \vspace{-20pt}
+    {\large\bfseries #1\par}
+    \vspace{10pt}
+    \epigraph{#2}{#3}
+    \normalfont
+    \vspace{-20pt}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                               NOTATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+\markboth{Notation}{Notation}
+\thispagestyle{fancy}
+\hypertarget{notation}{}
+\bookmark[level=0,dest=notation]{Notation}
+\vspace*{-3.0em}
+\begin{center}
+{\LARGE\bfseries Notation}\\[0.5em]
+\pgfornament[scale=0.40]{84}
+\end{center}
+\vspace{1em}
+\renewcommand{\glossarysection}[2][]{}
+\printglossary[style=mysymbolstyle]
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                               MISC CONTROLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}

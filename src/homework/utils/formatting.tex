@@ -1,0 +1,61 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                           HEADERS & FOOTERS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\fancyhf{}
+
+\fancypagestyle{firstpage}{
+  \fancyhf{}
+  \fancyhead[L]{\classname}
+  \fancyhead[C]{\authorname}
+  \fancyhead[R]{\duedate}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
+\fancyhead[LE]{\thepage}
+\fancyhead[RO]{\thepage}
+\fancyhead[LO]{\classname}
+\fancyhead[RE]{\classname}
+\renewcommand{\headrulewidth}{0pt}
+
+\thispagestyle{firstpage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                       SECTION CUSTOMIZATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\thesection}{\S\thechapter.\arabic{section}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                       THEOREM CUSTOMIZATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheoremstyle{homeworkstyle}
+  {\topsep}
+  {\topsep}
+  {\normalfont}
+  {}
+  {\normalfont}
+  {}
+  {0pt}
+  {%
+    \textbf{\thmname{#1}~\thmnumber{#2.}}%
+    \ifstrempty{#3}{}{~\hspace{1em}\textbf{\textrm{#3}}}%
+    \\[\baselineskip]
+  }
+\theoremstyle{homeworkstyle}
+\newtheorem{homework}{Problem}
+\renewcommand{\thehomework}{\arabic{homework}}
+
+% Boxed environment
+\newenvironment{hwproblem}[1][]{
+  \begin{framed}
+  \begin{homework}[#1]
+}{
+  \end{homework}
+  \end{framed}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                          FRONT PAGE FORMAT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{0.5cm}
+\begin{center}
+    {\LARGE \bfseries \assignmenttitle}\\[1ex]
+    {\large \itshape \assignmentsubtitle}
+\end{center}
+\vspace{0.1cm}

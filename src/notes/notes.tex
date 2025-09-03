@@ -1,0 +1,27 @@
+\documentclass[twoside,11pt,a4paper]{report}
+
+\input{utils/packages.tex}
+\input{utils/notation.tex}
+\input{utils/images.tex}
+
+\newcommand{\decoratedtitle}{{\Huge\calligra TILE\\ HERE... \\[0.2\baselineskip]}}
+\newcommand{\mediumtitle}{SUBTITLE HERE...}
+\newcommand{\authorname}{{AUTHOR NAME HERE...}}
+\newcommand{\titlestraight}{STRAIGHT TITLE HERE...}
+\newcommand{\publisher}{PUBLISHER HERE...}
+
+\begin{document}
+\input{utils/formatting.tex}
+
+\customchapter{CHAPTER TITLE HERE...}{QUOTE HERE...}{\textit{QUOTE DATE HERE...}\\ \textsc{QUOTE AUTHOR HERE...}}
+
+FIRST TEXT HERE...
+
+\begin{theo}[THEOREM NAME...]
+  THEOREM DESCRIPTION...
+\end{theo}
+
+\section{NEW SECTION}
+
+\appendix
+\end{document}
