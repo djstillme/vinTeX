@@ -1,6 +1,34 @@
 # vinTeX
 
-Collection of LaTeX templates with a vintage aesthetic. Currently there are three available templates: `homework`, `novel`, and `notes`. Usage should be as straightforward as compiling the `.tex` file located in each `/src` directory, given that you have an up-to-date TeX compiler that has access to the [CTAN](https://ctan.org/) packages.
+Collection of [LaTeX](https://www.latex-project.org/) templates with a vintage aesthetic. Currently there are three available templates: **homework**, **notes**, and **novel**.
+
+## 🪄 Installation
+
+### Prerequisites
+
+- A TeX compiler ([LuaLaTeX](https://www.luatex.org/), [pdfLaTeX](https://ctan.org/pkg/pdftex), [XeLaTeX](https://ctan.org/pkg/xetex)) with access to [CTAN](https://ctan.org/) packages.
+
+### 🐾 Step-by-Step Instructions
+
+1. **Clone this repository to your local machine**
+
+```
+git clone https://github.com/djstillme/vinTeX.git
+```
+
+## 📦 Usage
+
+### Editing TeX Files
+
+Inside the `src` folder, you'll find three templates, each with a .tex file tailored to a specific media type. This is the file you should edit for your project. To modify the template structure itself, refer to the `utils` folder.
+
+> [!IMPORTANT]
+> The exception to this is for `notes`, to modify the notation page you will need to modify `notes/utils/notation.tex` in two parts.
+
+
+### Compiling the Project
+
+Simply use your **TeX** compiler of choice to run the .tex file located in any one of the three template folders.
 
 ## Image Gallery
 
