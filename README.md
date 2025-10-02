@@ -23,7 +23,11 @@ git clone https://github.com/djstillme/vinTeX.git
 Inside the `src` folder, you'll find three templates, each with a .tex file tailored to a specific media type. This is the file you should edit for your project. To modify the template structure itself, refer to the `utils` folder.
 
 > [!IMPORTANT]
-> The exception to this is for `notes`, to modify the notation page you will need to modify `notes/utils/notation.tex` in two parts.
+> The exception is the `notes` template, which handles the notation page a bit differently. To modify it, you'll need to edit `notes/utils/notation.tex` in two places:
+> 1. **Commands** – Define shorthand commands you can use throughout your document, while not explicitly needed, it's useful for keeping notation consistent throughout your paper.
+> 2. **Glossary Elements** – Add entries that will appear on the notation page.
+>    
+> The template includes plenty of examples in both sections to help guide you.
 
 
 ### Compiling the Project
