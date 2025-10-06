@@ -67,29 +67,3 @@ Inside the `src` folder, you'll find three templates, each with a .tex file tail
 ### Compiling the Project
 
 Simply use your **TeX** compiler of choice to run the .tex file located in any one of the three template folders.
-
-## Image Gallery
-
-<details> 
-  <summary>Homework preview</summary>
-
- | Preview | 
-  | ------------- | 
-  | ![homework_1](images/homework_1.png) ![homework_2](images/homework_2.png) | 
-</details>
-
-<details> 
-  <summary>Novel preview</summary>
-
- | Preview | 
-  | ------------- | 
-  | ![novel_1](images/novel_1.png) ![novel_2](images/novel_2.png) | 
-</details>
-
-<details> 
-  <summary>Notes preview</summary>
-
- | Preview | 
-  | ------------- | 
-  | ![notes_1](images/notes_1.png) ![notes_2](images/notes_2.png) | 
-</details>
