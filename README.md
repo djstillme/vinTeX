@@ -2,12 +2,6 @@
 
 Collection of [LaTeX](https://www.latex-project.org/) templates with a vintage aesthetic. Currently there are three available templates: **homework**, **notes**, and **novel**.
 
-## 🪄 Installation
-
-### Prerequisites
-
-- A TeX compiler ([LuaLaTeX](https://www.luatex.org/), [pdfLaTeX](https://ctan.org/pkg/pdftex), [XeLaTeX](https://ctan.org/pkg/xetex)) with access to [CTAN](https://ctan.org/) packages.
-
 <table style="width:100%; table-layout:fixed; border-collapse: separate; border-spacing: 15px;">
   <tr>
     <th style="text-align:center; width:33.33%;">Homework</th>
@@ -38,9 +32,11 @@ Collection of [LaTeX](https://www.latex-project.org/) templates with a vintage a
   </tr>
 </table>
 
+## 🪄 Installation
 
+### Prerequisites
 
-
+- A TeX compiler ([LuaLaTeX](https://www.luatex.org/), [pdfLaTeX](https://ctan.org/pkg/pdftex), [XeLaTeX](https://ctan.org/pkg/xetex)) with access to [CTAN](https://ctan.org/) packages.
 
 ### 🐾 Step-by-Step Instructions
 
