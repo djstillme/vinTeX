@@ -7,12 +7,37 @@ Collection of [LaTeX](https://www.latex-project.org/) templates with a vintage a
 ### Prerequisites
 
 - A TeX compiler ([LuaLaTeX](https://www.luatex.org/), [pdfLaTeX](https://ctan.org/pkg/pdftex), [XeLaTeX](https://ctan.org/pkg/xetex)) with access to [CTAN](https://ctan.org/) packages.
-  
-| Homework | Novel | Notes |
-|:-----------------|:------------------|:-----------------------|
-| <img width="960" height="540" alt="Firefox + Swaync" src="images/homework_1.png" /> | <img width="960" height="540" alt="Neofetch + Thunar" src="images/novel_1.png" /> | <img width="960" height="540" alt="Kitty + Hotkey Helper" src="images/notes_2.png" /> |
-|  |  |  |
-| <img width="960" height="540" alt="Lazyorg + Pulsemixer" src="images/homework_2.png" /> | <img width="960" height="540" alt="Lazyorg + Pulsemixer" src="images/novel_2.png" /> | <img width="960" height="540" alt="Lazyorg + Pulsemixer" src="images/notes_1.png" /> |
+
+<table style="width:100%; table-layout:fixed; border-collapse: separate; border-spacing: 15px;">
+  <tr>
+    <th style="text-align:center; width:33.33%;">Homework</th>
+    <th style="text-align:center; width:33.33%;">Novel</th>
+    <th style="text-align:center; width:33.33%;">Notes</th>
+  </tr>
+  <tr>
+    <td style="text-align:center; vertical-align: top;">
+      <img src="images/homework_1.png" alt="Homework 1" style="width:100%; max-width:480px; height:300px; object-fit:cover; display:block; margin: 0 auto;"/>
+    </td>
+    <td style="text-align:center; vertical-align: top;">
+      <img src="images/novel_1.png" alt="Novel 1" style="width:100%; max-width:480px; height:300px; object-fit:cover; display:block; margin: 0 auto;"/>
+    </td>
+    <td style="text-align:center; vertical-align: top;">
+      <img src="images/notes_1.png" alt="Notes 1" style="width:100%; max-width:480px; height:300px; object-fit:cover; display:block; margin: 0 auto;"/>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center; vertical-align: top;">
+      <img src="images/homework_2.png" alt="Homework 2" style="width:100%; max-width:480px; height:300px; object-fit:cover; display:block; margin: 0 auto;"/>
+    </td>
+    <td style="text-align:center; vertical-align: top;">
+      <img src="images/novel_2.png" alt="Novel 2" style="width:100%; max-width:480px; height:300px; object-fit:cover; display:block; margin: 0 auto;"/>
+    </td>
+    <td style="text-align:center; vertical-align: top;">
+      <img src="images/notes_2.png" alt="Notes 2" style="width:100%; max-width:480px; height:300px; object-fit:cover; display:block; margin: 0 auto;"/>
+    </td>
+  </tr>
+</table>
+
 
 
 
